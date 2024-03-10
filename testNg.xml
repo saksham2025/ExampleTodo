@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Test Suite">
+    <listeners>
+        <listener class-name="Reports.ExtentTestNGListener"/>
+    </listeners>
+    <test name="Android Tests">
+        <parameter name="platform" value="${platform}" />
+        <classes>
+            <class name="Android.TestCases.LoginTest"/>
+            <class name="Android.TestCases.HomePageTest"/>
+            <class name="Android.TestCases.ScreenOneTest"/>
+            <class name="Android.TestCases.ScreenTwoTest"/>
+        </classes>
+    </test>
+    <test name="IOS Tests">
+        <parameter name="platform" value="${platform}" />
+        <classes>
+            <class name="IOS.TestCasesIos.LoginTestIos"/>
+            <class name="IOS.TestCasesIos.HomPageTestIos"/>
+            <class name="IOS.TestCasesIos.ScreenOneTestIos"/>
+            <class name="IOS.TestCasesIos.ScreenTwoTestIos"/>
+        </classes>
+    </test>
+</suite>
