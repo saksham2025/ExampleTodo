@@ -35,5 +35,8 @@ public class AppiumDriverFactory{
         }
          return DriverManager.getDriver();
     }
+    public static boolean isAndroid() {
+        return driver instanceof AndroidDriver;
+    }
 }
 
